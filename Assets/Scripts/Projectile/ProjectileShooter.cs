@@ -39,6 +39,10 @@ public class ProjectileShooter : MonoBehaviour
         ball.GetComponent<Projectile>()?.SetDirection(direction);
     }
 
+    public int getShootNumber()
+    {
+        return currentShot;
+    }
     public void ReadyNext()
     {
         currentShot++;

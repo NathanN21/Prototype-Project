@@ -83,7 +83,11 @@ public class PlayerController : MonoBehaviour
         if (_inputActions.Player.Fire.WasPerformedThisFrame())          
         {
             _shooter.Fire(new Vector2(_isFacingRight ? 1 : -1, 0));
-            _healthSystem.SelfDamage(1);
+            
+            if (_shooter.getShootNumber() == 1)
+            {
+                _healthSystem.SelfDamage(1);
+            }
         }
 
         if (_inputActions.Player.CycleShot.WasPerformedThisFrame())
