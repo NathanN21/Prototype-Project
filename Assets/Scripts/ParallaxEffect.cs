@@ -15,7 +15,6 @@ public class ParallaxEffect : MonoBehaviour
         startpos = transform.position;
         size = GetComponent<TilemapRenderer>().bounds.size;
     }
- 
     void Update()
     {
         float temp     = cam.transform.position.x * (1 - parallaxFactor);
